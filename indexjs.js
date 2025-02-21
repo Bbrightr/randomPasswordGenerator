@@ -33,3 +33,47 @@ generatePass.addEventListener("click", function(){
     
 }
 )
+
+function copyFirstPw() {
+    var range = document.createRange();
+    range.selectNode(document.getElementById("firstPassword"));
+    window.getSelection().removeAllRanges(); // clear current selection
+    window.getSelection().addRange(range); // to select text
+    document.execCommand("copy");
+    window.getSelection().removeAllRanges();// to deselect
+    alert("First password copied: " + range)
+}
+
+function copySecondPw() {
+    var range = document.createRange();
+    range.selectNode(document.getElementById("secondPassword"));
+    window.getSelection().removeAllRanges(); // clear current selection
+    window.getSelection().addRange(range); // to select text
+    document.execCommand("copy");
+    window.getSelection().removeAllRanges();// to deselect
+    alert("Second password copied: " + range)
+}
+
+
+// function myFunction() {
+//     /* Get the text field */
+//     var copyText = document.getElementById("copyFirstPw");
+  
+//     /* Select the text field */
+//     copyText.select(randomPassword1());
+//     copyText.setSelectionRange(0, 99999); /* For mobile devices */
+  
+//      /* Copy the text inside the text field */
+//     navigator.clipboard.writeText(copyText.value);
+  
+//     /* Alert the copied text */
+//     alert("Copied: " + copyText.value);
+//   } 
+// document.getElementById("copyFirstPw").addEventListener("click", function(){
+//     var copyPw = document.getElementById("firstPassword");
+//     copyPw.select();
+//     copyPw.setSelectionRange(0, 99999);
+
+//     navigator.clipboard.writeText(copyPw.value);
+//     alert("Copied password: " + copyPw.value);
+// })

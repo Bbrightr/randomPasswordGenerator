@@ -1,34 +1,72 @@
 <html>
     <head>
         <link rel="stylesheet" href="indexstyle.css">
+        <link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css" />
     </head>
     <body>
         <div class="container">
             <div class="generatorInfo">
-                <h1>Generate a <br><span id="color-me">random password</span></h1>
-                <p>Never use an insecure password again</p>
-                <button id="generatePass">Generate password</button>
-                <!-- <button id="clear" onclick="clear()">Clear password</button> -->
+                <div class="subjectHeader">
+                    <div class="secure-logo"></div>
+                    <!-- <img src="https://images.ctfassets.net/xwxknivhjv1b/65ITzfv7j88JWqIGoTprVo/0f4c2c7d7b555d9ea27e72b1faa1cbf0/LockShield.svg"> -->
+                     <div class="mainHeader">
+                        <h1>Generate a <br><span id="color-me">random password</span></h1>
+                        <p>Never use an insecure password again</p>
+                    </div>
+                </div>
+<!--                 
+                <div>
+                    <hr>
+                </div>
+                <p><input type="checkbox"> Make password all letters</p>
+                <p><input type="checkbox"> Make password all letters</p>
+                <p><input type="checkbox"> Make password all letters</p> -->
+                
             </div>
             <div>
                 <hr>
             </div>
             
             <div class="your-password">
-                <div class="pasSpace" id="firstPassword" onclick="copyDivToClipboard()"></div>
-                <div class="pasSpace" id="secondPassword"></div>
+                <div class="passwordSection">
+                    <div class="pasSpace" id="firstPassword"></div>
+                    <i class="hgi-stroke hgi-copy-01" id="copyFirstPw" onclick="copyFirstPw()"></i>
+                </div>
+                <div class="passwordSection">
+                    <div class="pasSpace" id="secondPassword"></div>
+                    <i class="hgi-stroke hgi-copy-01" id="copySecondPw" onclick="copySecondPw()"></i>
+                </div>
+            </div>
+            <!-- <div>
+                <hr>
+            </div> -->
+            <div>
+                <button id="generatePass">Generate password</button>
+                
+                <!-- <button id="clear" onclick="clear()">Clear password</button> -->
             </div>
         </div>
-        <script>
-            function copyDivToClipboard() {
+        <!-- <script>
+            function copyFirstPw() {
                 var range = document.createRange();
                 range.selectNode(document.getElementById("firstPassword"));
                 window.getSelection().removeAllRanges(); // clear current selection
                 window.getSelection().addRange(range); // to select text
                 document.execCommand("copy");
                 window.getSelection().removeAllRanges();// to deselect
+                alert("First password copied: " + range)
             }
-        </script>
+
+            function copySecondPw() {
+                var range = document.createRange();
+                range.selectNode(document.getElementById("secondPassword"));
+                window.getSelection().removeAllRanges(); // clear current selection
+                window.getSelection().addRange(range); // to select text
+                document.execCommand("copy");
+                window.getSelection().removeAllRanges();// to deselect
+                alert("Second password copied: " + range)
+            }
+        </script> -->
         <script src="indexjs.js"></script>
     </body>
 </html>
