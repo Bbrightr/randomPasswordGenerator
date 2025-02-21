@@ -50,3 +50,10 @@ function copySecondPw() {
     alert("Second password copied: " + range)
 }
 
+
+// next update
+// + toggle on/off for symbols to be included or not
+// + tool for indicating length of password
+// + check box to include or remove Capitals or small letters
+// + make password box itself clickable
+// + alert tool box to pop up and notify user
