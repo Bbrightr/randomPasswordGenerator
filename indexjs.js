@@ -22,10 +22,6 @@ function randomPassword2(){
     secondPass.textContent += characters[Math.floor(Math.random()*characters.length)]
 }
 
-// function clear(){
-//     firstPass.textContent = []
-//     secondPass.textContent = []
-// }
 
 generatePass.addEventListener("click", function(){
     randomPassword1()
@@ -54,26 +50,3 @@ function copySecondPw() {
     alert("Second password copied: " + range)
 }
 
-
-// function myFunction() {
-//     /* Get the text field */
-//     var copyText = document.getElementById("copyFirstPw");
-  
-//     /* Select the text field */
-//     copyText.select(randomPassword1());
-//     copyText.setSelectionRange(0, 99999); /* For mobile devices */
-  
-//      /* Copy the text inside the text field */
-//     navigator.clipboard.writeText(copyText.value);
-  
-//     /* Alert the copied text */
-//     alert("Copied: " + copyText.value);
-//   } 
-// document.getElementById("copyFirstPw").addEventListener("click", function(){
-//     var copyPw = document.getElementById("firstPassword");
-//     copyPw.select();
-//     copyPw.setSelectionRange(0, 99999);
-
-//     navigator.clipboard.writeText(copyPw.value);
-//     alert("Copied password: " + copyPw.value);
-// })
