@@ -37,7 +37,7 @@ function copyFirstPw() {
     window.getSelection().addRange(range); // to select text
     document.execCommand("copy");
     window.getSelection().removeAllRanges();// to deselect
-    alert("First password copied: " + range)
+    alert("Copied: " + range)
 }
 
 function copySecondPw() {
@@ -47,7 +47,7 @@ function copySecondPw() {
     window.getSelection().addRange(range); // to select text
     document.execCommand("copy");
     window.getSelection().removeAllRanges();// to deselect
-    alert("Second password copied: " + range)
+    alert("Copied: " + range)
 }
 
 
