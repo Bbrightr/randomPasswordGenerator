@@ -11,21 +11,29 @@ let secondPass = document.getElementById("secondPassword")
 let generatePass = document.getElementById("generatePass")
 // let resetPass = document.getElementById("clear")
 
-function randomPassword1(){
-    firstPass.textContent = [];
-    for (let i= 0; i < 15 ; i++)
-    firstPass.textContent += characters[Math.floor(Math.random()*characters.length)]
-}
-function randomPassword2(){
-    secondPass.textContent = [];
-    for (let i= 0; i < 15 ; i++)
-    secondPass.textContent += characters[Math.floor(Math.random()*characters.length)]
-}
+// function randomPassword1(){
+//     firstPass.textContent = [];
+//     for (let i= 0; i < 15 ; i++)
+//     firstPass.textContent += characters[Math.floor(Math.random()*characters.length)]
+// }
+// function randomPassword2(){
+//     secondPass.textContent = [];
+//     for (let i= 0; i < 15 ; i++)
+//     secondPass.textContent += characters[Math.floor(Math.random()*characters.length)]
+// }
+
 
 
 generatePass.addEventListener("click", function(){
-    randomPassword1()
-    randomPassword2()
+    firstPass.textContent = [];
+    secondPass.textContent = [];
+    for (let i= 0; i < 15 ; i++){
+    randomPassword1 = firstPass.textContent += characters[Math.floor(Math.random()*characters.length)]
+    randomPassword2 = secondPass.textContent += characters[Math.floor(Math.random()*characters.length)]
+}
+
+    randomPassword1
+    randomPassword2
     
 }
 )
